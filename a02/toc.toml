@@ -1,0 +1,153 @@
+["Оглавление"]
+
+["Оглавление"."01"]
+"name" = "Пример 01"
+"title" = "Первый блокнот marimo"
+"url" = "a02_01.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."02"]
+"name" = "Пример 02"
+"title" = "Ячейка Python блокнота marimo"
+"url" = "a02_02.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."03"]
+"name" = "Пример 03"
+"title" = "Ячейка Markdown блокнота marimo"
+"url" = "a02_03.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."04"]
+"name" = "Пример 04"
+"title" = "Ячейка SQL блокнота marimoа"
+"url" = "a02_04.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+
+["Оглавление"."05"]
+"name" = "Пример 05"
+"title" = "Замечания в Markdown"
+"url" = "a02_05.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+
+["Оглавление"."06"]
+"name" = "Пример 06"
+"title" = "Исходный текст в Markdown"
+"url" = "a02_06.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."07"]
+"name" = "Пример 07"
+"title" = "Мультимедиа в Markdown"
+"url" = "a02_07.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."08"]
+"name" = "Пример 08"
+"title" = "Диаграммы"
+"url" = "a02_08.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."09"]
+"name" = "Пример 09"
+"title" = "Визуализация matplotlib"
+"url" = "a02_09.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."10"]
+"name" = "Пример 10"
+"title" = "Визуализация plotly"
+"url" = "a02_10.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."11"]
+"name" = "Пример 11"
+"title" = "Реактивные переменные"
+"url" = "a02_11.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."12"]
+"name" = "Пример 12"
+"title" = "Пользовательский интерфейс"
+"url" = "a02_12.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."13"]
+"name" = "Пример 13"
+"title" = "Раскладки"
+"url" = "a02_13.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."14"]
+"name" = "Пример 14"
+"title" = "Запуск по нажатию кнопки"
+"url" = "a02_14.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."15"]
+"name" = "Пример 15"
+"title" = "Гармошка и вкладки"
+"url" = "a02_15.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."16"]
+"name" = "Пример 16"
+"title" = "Боковая панель"
+"url" = "a02_16.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."17"]
+"name" = "Пример 17"
+"title" = "Квазианимация"
+"url" = "a02_17.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+["Оглавление"."18"]
+"name" = "Пример 18"
+"title" = "Кнопки и формы"
+"url" = "a02_18.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+
+["Оглавление"."19"]
+"name" = "Пример 19"
+"title" = "Массивы и словари для создания виджетов"
+"url" = "a02_19.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+
+["Оглавление"."20"]
+"name" = "Пример 20"
+"title" = "Работаем с toml"
+"url" = "a02_20.py"
+"app_type" = "marimo"
+"prm" =  ""
+
+
+["Оглавление"."21"]
+"name" = "Пример 21"
+"title" = "3d в блокноте marimo"
+"url" = "a02_21.py"
+"app_type" = "marimo"
+"prm" =  ""
