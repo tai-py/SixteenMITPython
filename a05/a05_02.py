@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.12.4"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -8,7 +8,7 @@ app = marimo.App(width="medium")
 def _():
     import marimo as mo
     mo.md("# Изображение енота")
-    return (mo,)
+    return
 
 
 @app.cell
@@ -23,7 +23,7 @@ def _():
     plt.axis('off')
     print(f"{f.shape=}, {f.dtype=}")
     fig1
-    return f, face, fig1, np, plt
+    return f, face, np, plt
 
 
 @app.cell
@@ -40,7 +40,7 @@ def _(fg, plt):
     plt.imshow(fg, cmap='gray')
     plt.axis('off')
     fig2
-    return (fig2,)
+    return
 
 
 @app.cell
@@ -53,7 +53,7 @@ def _(plt):
     plt.axis('off')
     print(f"{asc.shape=}, {asc.dtype=}")
     fig3
-    return asc, ascent, fig3
+    return (asc,)
 
 
 @app.cell
@@ -64,7 +64,7 @@ def _(face, plt):
     fig4 = plt.figure(figsize=(3,2))
     plt.imshow(fc[:h//2, w//2:, :])
     fig4
-    return c, fc, fig4, h, w
+    return (fc,)
 
 
 @app.cell
@@ -73,7 +73,7 @@ def _(fc, plt):
     fig5 = plt.figure(figsize=(4,3))
     plt.imshow(fc[::10, ::10, :])
     fig5
-    return (fig5,)
+    return
 
 
 @app.cell
@@ -82,7 +82,7 @@ def _(asc, plt):
     fig6 = plt.figure(figsize=(3,3))
     plt.imshow(asc[::-2, ::-2], cmap='gray')
     fig6
-    return (fig6,)
+    return
 
 
 @app.cell
@@ -98,7 +98,7 @@ def _(np):
     a2[:,:] = a5
     a3[:,:] = 42
     a1, a2, a3
-    return a1, a2, a3, a4, a5
+    return
 
 
 @app.cell
@@ -111,7 +111,7 @@ def _(np, plt):
     plt.imshow(mesh, cmap='gray')
     plt.axis('off')
     fig7
-    return fig7, mesh
+    return
 
 
 @app.cell
@@ -129,8 +129,8 @@ def _(fg, plt):
         return fig 
 
     to_bw(fg)
-    
-    return (to_bw,)
+
+    return
 
 
 @app.cell
@@ -143,8 +143,7 @@ def _(np, plt):
     plt.xlabel('x', fontsize=14)
     plt.ylabel('y = np.heaviside(x, 1)', fontsize=14)
     fig8
-
-    return fig8, xf, yf
+    return
 
 
 @app.cell
@@ -166,8 +165,7 @@ def _(np, plt):
 
     fig9, xh, yh = numpy_funcs()
     fig9
-
-    return fig9, numpy_funcs, xh, yh
+    return (yh,)
 
 
 @app.cell
@@ -175,8 +173,7 @@ def _(np, yh):
     # сортировка массива
     yh_sorted = np.sort(yh)
     (yh[0], yh[-1]), (yh_sorted[0], yh_sorted[-1])
-
-    return (yh_sorted,)
+    return
 
 
 @app.cell
@@ -187,8 +184,7 @@ def _(np):
     X, Y = np.meshgrid(xm, ym)
     Z = X**2 + Y**2
     xm, ym, X, Y, Z
-
-    return X, Y, Z, nx, ny, xm, ym
+    return X, Y, Z
 
 
 @app.cell
@@ -202,8 +198,7 @@ def _(X, Y, Z, plt):
     plt.colorbar(cb)
 
     fig10
-
-    return ax, cb, fig10
+    return
 
 
 @app.cell
@@ -220,7 +215,7 @@ def _(np, plt):
     plt.xlabel('t', fontsize=14)
     plt.ylabel('y(t)', fontsize=14)
     fig11
-    return fig11, imp2, tw, yw
+    return
 
 
 @app.cell
@@ -240,8 +235,7 @@ def _(f, np, plt):
     plt.axis('off')
     print(f"{fpa.shape=}, {fpa.dtype=}")
     fig12
-
-    return Image, fig12, fp, fpa, im
+    return (fpa,)
 
 
 @app.cell
@@ -251,8 +245,7 @@ def _(fpa, plt):
     fig13 = plt.figure(figsize=(3,3))
     plt.imshow(ff, cmap='gray')
     fig13
-
-    return ff, fig13
+    return
 
 
 if __name__ == "__main__":

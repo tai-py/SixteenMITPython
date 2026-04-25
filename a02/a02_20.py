@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.12.8"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -23,12 +23,14 @@ def _(mo):
     {toc_text}
     ```
     """)
-    return f, toc_, toc_text
+    return (toc_,)
 
 
 @app.cell
 def _(mo):
-    mo.md("""## Непосредственно отображаем загруженный файл **{toc_}**""")
+    mo.md("""
+    ## Непосредственно отображаем загруженный файл **{toc_}**
+    """)
     return
 
 
@@ -37,7 +39,7 @@ def _(toc_):
     import toml
     toc_dict = toml.load(toc_)
     toc_dict
-    return toc_dict, toml
+    return (toc_dict,)
 
 
 @app.cell
@@ -46,7 +48,7 @@ def _(mo, toc_, toc_dict):
 
     for item in toc_dict["Оглавление"].items():
         mo.output.append(mo.md(f"{item[0]}: {item[1]}"))
-    return (item,)
+    return
 
 
 @app.cell
@@ -55,7 +57,7 @@ def _(toc_dict):
     for key, value in toc_dict["Оглавление"].items():
         items.append({key: value})
     items
-    return items, key, value
+    return
 
 
 if __name__ == "__main__":

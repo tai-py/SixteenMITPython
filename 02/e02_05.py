@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.14.17"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -103,12 +103,10 @@ def _(iters_distribution):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
-    iters_distribution(f=lambda z: z**11 - 1, fs=lambda z:11*z**10, 
+    mo.md(r"""
+    iters_distribution(f=lambda z: z**11 - 1, fs=lambda z:11*z**10,
                         n=600, cmap="rainbow")
-    """
-    )
+    """)
     return
 
 
@@ -142,7 +140,9 @@ def _(iters_distribution):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Используем штатную библиотечную функцию""")
+    mo.md(r"""
+    ## Используем штатную библиотечную функцию
+    """)
     return
 
 

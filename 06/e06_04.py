@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.0"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -13,13 +13,14 @@ def _():
     import seaborn as sns
 
     mo.md("#Строим гистограммы")
-
     return mo, np, pd, plt, sns
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Рост и вес студентов""")
+    mo.md(r"""
+    ## Рост и вес студентов
+    """)
     return
 
 
@@ -38,7 +39,9 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(r"""##Гистограммы matplotlib для роста студентов""")
+    mo.md(r"""
+    ##Гистограммы matplotlib для роста студентов
+    """)
     return
 
 
@@ -54,13 +57,14 @@ def _(height, plt):
     plt.tight_layout()
     plt.savefig('06_14.png', dpi=300, facecolor='white')
     _fig
-
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""##Гистограммы matplotlib для веса студентов""")
+    mo.md(r"""
+    ##Гистограммы matplotlib для веса студентов
+    """)
     return
 
 
@@ -76,13 +80,14 @@ def _(plt, weight):
     plt.tight_layout()
     plt.savefig('06_15.png', dpi=300, facecolor='white')
     _fig
-
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""##Гистограммы seaborn для роста и веса студентов""")
+    mo.md(r"""
+    ##Гистограммы seaborn для роста и веса студентов
+    """)
     return
 
 
@@ -114,7 +119,9 @@ def _(height, plt, sns, weight):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Двумерная гистограмма""")
+    mo.md(r"""
+    ## Двумерная гистограмма
+    """)
     return
 
 
@@ -131,14 +138,12 @@ def _(height, pd, plt, sns, weight):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Трехмерная гистограмма
     [3D гистограмма в Matplotlib](https://labex.io/ru/tutorials/python-matplotlib-3d-histogram-48768)
 
     [Гистограммы и графики распределения в Python](https://habr.com/ru/companies/skillfactory/articles/683738/)
-    """
-    )
+    """)
     return
 
 

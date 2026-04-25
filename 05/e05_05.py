@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -20,7 +20,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Рисуем схему""")
+    mo.md(r"""
+    ## Рисуем схему
+    """)
     return
 
 
@@ -58,7 +60,9 @@ def _(elm, schemdraw):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Вольт-амперная характеристика туннельного диода (ВАХ)""")
+    mo.md(r"""
+    ## Вольт-амперная характеристика туннельного диода (ВАХ)
+    """)
     return
 
 
@@ -82,7 +86,9 @@ def _(np, plt):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Функция для вычисления правых частей системы уравнений (5.10), (5.11)""")
+    mo.md(r"""
+    ## Функция для вычисления правых частей системы уравнений (5.10), (5.11)
+    """)
     return
 
 

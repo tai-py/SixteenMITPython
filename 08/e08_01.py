@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -66,7 +66,9 @@ def _(y01):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Перейдем от символьных переменных к обычным переменным Python""")
+    mo.md(r"""
+    ## Перейдем от символьных переменных к обычным переменным Python
+    """)
     return
 
 
@@ -81,13 +83,11 @@ def _(alpha, smp, x01, x02, y01, y02):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     Мы получили универсальные функции NumPy для вычисления координат точки (x0, y0).
 
     Теперь напишем функцию для вычисления координат остальных точек
-    """
-    )
+    """)
     return
 
 
@@ -117,7 +117,9 @@ def _(np, plt, x01p, x02p, y01p, y02p):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Рисуем механизм для определенного положения точки x3, y3""")
+    mo.md(r"""
+    ## Рисуем механизм для определенного положения точки x3, y3
+    """)
     return
 
 
@@ -185,7 +187,9 @@ def _(mech, plt, x02p, y02p):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Создаем анимацию""")
+    mo.md(r"""
+    ## Создаем анимацию
+    """)
     return
 
 
@@ -215,7 +219,9 @@ def _(mech, plt, x02p, y02p):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Вставляем анимацию""")
+    mo.md(r"""
+    ## Вставляем анимацию
+    """)
     return
 
 
@@ -251,7 +257,9 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Исследуем критические точки""")
+    mo.md(r"""
+    ## Исследуем критические точки
+    """)
     return
 
 
@@ -287,7 +295,6 @@ def _(coords, np, plt, x02p, y02p):
         return fig, ylevel - ymin
 
     f()
-
     return
 
 

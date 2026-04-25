@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.0"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -59,14 +59,15 @@ def _(np):
             ]
         )
         return D @ np.array(u)
+
     return (dimet,)
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""Функция dimet позволяет работать с точками, заданными как кортежами и списками, так и массивами NumPy"""
-    )
+    mo.md(r"""
+    Функция dimet позволяет работать с точками, заданными как кортежами и списками, так и массивами NumPy
+    """)
     return
 
 
@@ -88,9 +89,9 @@ def _(dimet, np):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""Проекцию на плоскость можно осуществить тремя различными способами, зануляя заначение по одной из координатных осей"""
-    )
+    mo.md(r"""
+    Проекцию на плоскость можно осуществить тремя различными способами, зануляя заначение по одной из координатных осей
+    """)
     return
 
 
@@ -116,6 +117,7 @@ def _(dimet, np):
             return np.array([v[0], v[2]]), "Проекция на x0z"
         else:
             return np.array([v[0], v[1]]), "Проекция на x0y"
+
     return (proj,)
 
 
@@ -150,7 +152,9 @@ def _(proj):
 
 @app.cell
 def _(mo):
-    mo.md(r"""Теперь нарисуем диметрические проекции трех осей на плоскость""")
+    mo.md(r"""
+    Теперь нарисуем диметрические проекции трех осей на плоскость
+    """)
     return
 
 
@@ -164,6 +168,7 @@ def _(np, proj):
             ax.plot([0, v[0][0]], [0, v[0][1]], "k-")
             ax.set_title(v[1])
         return ax
+
     return (three_axis,)
 
 
@@ -197,6 +202,7 @@ def _(plt, three_axis):
             ax = f(ax, axis=axis)
         plt.tight_layout()
         return fig
+
     return (three_dimet_proj,)
 
 
@@ -210,9 +216,9 @@ def _(three_dimet_proj):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""## Поверхности в трехмерном пространстве, на которых мы будем рисовать фигуры"""
-    )
+    mo.md(r"""
+    ## Поверхности в трехмерном пространстве, на которых мы будем рисовать фигуры
+    """)
     return
 
 
@@ -228,6 +234,7 @@ def _(np):
                 v / 2 * np.sin(u / 2),
             ]
         )
+
     return (mebius,)
 
 
@@ -236,6 +243,7 @@ def _(np):
     def cylinder(x, y, r=0.5):
         # отображение единичного квадрата на цилиндр: (u, v)-> x, y, z
         return [r * np.cos(2 * np.pi * x), r * np.sin(2 * np.pi * x), y]
+
     return (cylinder,)
 
 
@@ -250,12 +258,15 @@ def _(np):
             (R + r * np.cos(y)) * np.sin(x),
             r * np.sin(y),
         ]
+
     return (thor,)
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""### Рисуем цидиндр, тор и ленту Мебиуса""")
+    mo.md(r"""
+    ### Рисуем цидиндр, тор и ленту Мебиуса
+    """)
     return
 
 
@@ -299,7 +310,9 @@ def _(cylinder, mebius, np, plt, thor):
 
 @app.cell
 def _(mo):
-    mo.md(r"""### Отображение на поверхность""")
+    mo.md(r"""
+    ### Отображение на поверхность
+    """)
     return
 
 
@@ -322,6 +335,7 @@ def _(proj):
             v[i, :] = proj(xy, axis)[0]
         f.vertices = v
         return f
+
     return (apply_func,)
 
 
@@ -374,12 +388,15 @@ def _(apply_func, cylinder, draw, f_square_limit, get_fish_outline):
         return draw(
             f, fill=fill, axis=axis, box=False, figsize=figsize, ncols=1, nrows=1
         )
+
     return (fig_on_surface,)
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Символ Г на цилиндре""")
+    mo.md(r"""
+    ## Символ Г на цилиндре
+    """)
     return
 
 
@@ -408,7 +425,9 @@ def _(fig_on_surface, get_G):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Квадратный предел из символов Г на цилиндре""")
+    mo.md(r"""
+    ## Квадратный предел из символов Г на цилиндре
+    """)
     return
 
 
@@ -439,7 +458,9 @@ def _(G, fig_on_surface):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Рыбка на цилиндре""")
+    mo.md(r"""
+    ## Рыбка на цилиндре
+    """)
     return
 
 
@@ -499,7 +520,9 @@ def _(fig_on_surface, flip_x, get_fish_outline):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Рыбка на торе""")
+    mo.md(r"""
+    ## Рыбка на торе
+    """)
     return
 
 
@@ -532,7 +555,9 @@ def _(fig_on_surface, flip_x, get_fish, thor):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Рыбка на ленте Мебиуса""")
+    mo.md(r"""
+    ## Рыбка на ленте Мебиуса
+    """)
     return
 
 
@@ -562,12 +587,10 @@ def _(G, fig_on_surface, mebius):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Упражняемся с символом Ж
     Соберем его не из отрезков прямых, а кривых Безье
-    """
-    )
+    """)
     return
 
 
@@ -611,6 +634,7 @@ def _():
     C  0.067,  0.000,  0.033,  0.000,  0.000,  0.000
         """
         return parse_path(J)
+
     return (get_J,)
 
 
@@ -625,7 +649,9 @@ def _(draw, get_J):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Отображаем Ж на круг""")
+    mo.md(r"""
+    ## Отображаем Ж на круг
+    """)
     return
 
 
@@ -741,7 +767,9 @@ def _(draw, f_square_limit, get_J, to_circle):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Круглый предел из символа Ж на цилиндре""")
+    mo.md(r"""
+    ## Круглый предел из символа Ж на цилиндре
+    """)
     return
 
 
@@ -783,7 +811,9 @@ def _(cylinder, fig_on_surface, get_J, to_circle):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Круглый предел из символе  Ж на торе""")
+    mo.md(r"""
+    ## Круглый предел из символе  Ж на торе
+    """)
     return
 
 
@@ -798,7 +828,9 @@ def _(fig_on_surface, get_J, thor, to_circle):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Круглый предел из символе  Ж на ленте мебиуса""")
+    mo.md(r"""
+    ## Круглый предел из символе  Ж на ленте мебиуса
+    """)
     return
 
 

@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -35,12 +35,10 @@ def _(np, plt):
 
 @app.cell
 def _(mo, sinx_x):
-    mo.md(
-        f"""
+    mo.md(f"""
     ## Интегрируем рисунок matplotlib в Mardown
     {mo.as_html(sinx_x(a=5))}
-    """
-    )
+    """)
     return
 
 

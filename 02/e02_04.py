@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -18,7 +18,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Кардиоида и прямая линия""")
+    mo.md(r"""
+    ## Кардиоида и прямая линия
+    """)
     return
 
 
@@ -29,6 +31,7 @@ def _():
 
     def cardioid(x, y):
         return (x**2 + y**2 - 0.5) ** 3 - 3 * x**2 * y**3
+
     return (cardioid,)
 
 
@@ -66,7 +69,9 @@ def _(cardioid, np, plt):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Симаолическое вычисление корней""")
+    mo.md(r"""
+    ## Символическое вычисление корней
+    """)
     return
 
 
@@ -103,7 +108,9 @@ def _(np, smp):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Конструируем собственную цветовую палитру""")
+    mo.md(r"""
+    ## Конструируем собственную цветовую палитру
+    """)
     return
 
 
@@ -145,7 +152,9 @@ def _(np, plt):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Система уравнений для численного решения""")
+    mo.md(r"""
+    ## Система уравнений для численного решения
+    """)
     return
 
 
@@ -167,7 +176,9 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Тестируем решение системы уравнений""")
+    mo.md(r"""
+    ## Тестируем решение системы уравнений
+    """)
     return
 
 
@@ -180,7 +191,9 @@ def _(heart_arrow, root):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Функция для вычисления номера корня уравнения""")
+    mo.md(r"""
+    ## Функция для вычисления номера корня уравнения
+    """)
     return
 
 
@@ -215,7 +228,9 @@ def _(croots, heart_arrow, np, root):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Функция для визуализации областей притяжения корней""")
+    mo.md(r"""
+    ## Функция для визуализации областей притяжения корней
+    """)
     return
 
 
@@ -270,7 +285,9 @@ def _(visualize_roots):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Строим анимацию""")
+    mo.md(r"""
+    ## Строим анимацию
+    """)
     return
 
 
@@ -294,7 +311,9 @@ def _(plt, visualize_roots):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Собираем и сохраняем анимацию""")
+    mo.md(r"""
+    ## Собираем и сохраняем анимацию
+    """)
     return
 
 
@@ -312,6 +331,7 @@ def _(bs, plt):
         plt.title(f"b={bs[i]:6.2f}")
         plt.axis('off')
         return fig
+
     return frame, gif
 
 
@@ -324,7 +344,9 @@ def _(frame, gif):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Отображаем анимацию средствами marimo""")
+    mo.md(r"""
+    ## Отображаем анимацию средствами marimo
+    """)
     return
 
 

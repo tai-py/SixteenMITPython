@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -74,7 +74,9 @@ def _(np, plt):
 
 @app.cell
 def _(mo):
-    mo.md(r"""##Сравниваем полученные решения""")
+    mo.md(r"""
+    ##Сравниваем полученные решения
+    """)
     return
 
 

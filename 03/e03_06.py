@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -63,6 +63,7 @@ def _(Ivl, np):
             )
 
         return u, t, x
+
     return (bar_ivl,)
 
 

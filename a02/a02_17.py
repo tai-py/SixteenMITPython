@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.2"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -30,12 +30,10 @@ def _(datetime, mo, refresh):
 
 @app.cell
 def _(mo):
-    mo.md(
-        """
+    mo.md("""
     >Обязательно должно быть установлено автоматическое, а не ленивое выполнение ячеек.
     > Для этого в правом верхнем углу блокнота необходимо  нажать кнопку **Settings**, затем ссылку **User settings** внизу появившегося диалога, выбрать **Runtime** из меню, далее установить **on cell change autorun **. Альтернативой **autorun** является **lazy**.
-    """
-    )
+    """)
     return
 
 

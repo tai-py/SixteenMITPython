@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.11.31"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -16,7 +16,7 @@ def _():
 @app.cell
 def _(mo, random):
     array = mo.ui.array([mo.ui.text(placeholder="Введите данные") \
-                        for i in range(random.randint(1, 5))])
+                        for i in range(random.randint(2, 5))])
     dictionary = mo.ui.dictionary({str(i): mo.ui.text(placeholder='Введите данные') \
               for i in range(random.randint(1, 5))})
     mo.hstack([array, dictionary], justify="start")

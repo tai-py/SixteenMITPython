@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -17,7 +17,9 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(r"""## 32-разрядные числа с плавающей точкой (float32)""")
+    mo.md(r"""
+    ## 32-разрядные числа с плавающей точкой (float32)
+    """)
     return
 
 
@@ -39,7 +41,9 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## 64-разрядные числа с плавающей точкой  (float64)""")
+    mo.md(r"""
+    ## 64-разрядные числа с плавающей точкой  (float64)
+    """)
     return
 
 

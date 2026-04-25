@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.2"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -38,7 +38,9 @@ def _(np):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Функция для вычисления правой части системы уравнения для гравитационного поезда (без учета трения)""")
+    mo.md(r"""
+    ## Функция для вычисления правой части системы уравнения для гравитационного поезда (без учета трения)
+    """)
     return
 
 
@@ -52,7 +54,9 @@ def grav_train1(t, y, g, R, S, m, ρ_air, k, f):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Решаем систему без учета трения""")
+    mo.md(r"""
+    ## Решаем систему без учета трения
+    """)
     return
 
 
@@ -68,7 +72,9 @@ def _(R, S, f, g, k, m, solve_ivp, t_end, t_eval, v0, x0, ρ_air):
 
 @app.cell
 def _(mo):
-    mo.md(r"""### Визуализация решения без учета трения""")
+    mo.md(r"""
+    ### Визуализация решения без учета трения
+    """)
     return
 
 
@@ -114,7 +120,9 @@ def _(plt, y1):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Функция для вычисления правой части системы уравнения для гравитационного поезда""")
+    mo.md(r"""
+    ## Функция для вычисления правой части системы уравнения для гравитационного поезда
+    """)
     return
 
 
@@ -129,12 +137,15 @@ def _(np):
              -np.sign(v)*f*g*np.sqrt(1 - (x/R)**2) \
              +np.sign(v)*force/m
         return [xs, vs]
+
     return (grav_train2,)
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Решение системы""")
+    mo.md(r"""
+    ### Решение системы
+    """)
     return
 
 
@@ -165,7 +176,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Визуализация решения""")
+    mo.md(r"""
+    ### Визуализация решения
+    """)
     return
 
 
@@ -183,7 +196,9 @@ def _(phase_portrait, y2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Выкачаем воздух и тоннеля""")
+    mo.md(r"""
+    ### Выкачаем воздух и тоннеля
+    """)
     return
 
 
@@ -212,7 +227,9 @@ def _(phase_portrait, y3):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Добавляем силу тяги""")
+    mo.md(r"""
+    ### Добавляем силу тяги
+    """)
     return
 
 

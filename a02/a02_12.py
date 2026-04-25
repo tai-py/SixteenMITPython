@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.2"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -107,19 +107,25 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Кнопка обновления""")
+    mo.md(r"""
+    ## Кнопка обновления
+    """)
     return
 
 
 @app.cell
 def _(mo, refresh):
-    mo.md(f"""{refresh}, число обновлений: {refresh.value}""")
+    mo.md(f"""
+    {refresh}, число обновлений: {refresh.value}
+    """)
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Кнопки запуска""")
+    mo.md(r"""
+    ## Кнопки запуска
+    """)
     return
 
 

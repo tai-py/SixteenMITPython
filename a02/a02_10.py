@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.11.20"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -26,7 +26,7 @@ def _(pd, px):
                       color='DarkSlateGrey')),
                       selector=dict(mode='markers'))
     fig
-    return df, fig
+    return (fig,)
 
 
 @app.cell
@@ -40,7 +40,9 @@ def _(fig, mo):
 
 @app.cell
 def _(mo):
-    mo.md("""## Выводим трехмерные графики с помощью plotly""")
+    mo.md("""
+    ## Выводим трехмерные графики с помощью plotly
+    """)
     return
 
 
@@ -74,7 +76,8 @@ def _(np):
         xc, yc, zc = T[0], T[1], T[2]
 
         return  xc, yc, zc, xs, ys, zs
-    return trefoil, trefoil_curve_surface
+
+    return (trefoil_curve_surface,)
 
 
 @app.cell
@@ -90,7 +93,7 @@ def _(mo, pd, px, trefoil_curve_surface):
     mo.md(f"""## Трилистник - трехмерная кривая 
     {mo.as_html(fig_tc)}
     """).center()
-    return df_trefoil_curve, fig_tc, xc, xs, yc, ys, zc, zs
+    return xs, ys, zs
 
 
 @app.cell
@@ -101,7 +104,7 @@ def _(mo, xs, ys, zs):
     mo.md(f"""## Трилистник - трехмерная поверхность 
     {mo.as_html(fig_ts)}
     """).center()
-    return fig_ts, go
+    return
 
 
 if __name__ == "__main__":

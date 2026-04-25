@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.0"
+__generated_with = "0.23.2"
 app = marimo.App(width="full")
 
 
@@ -10,6 +10,7 @@ def _():
     import numpy as np
     import stats as st
     import matplotlib.pyplot as plt
+
     return mo, np, plt
 
 
@@ -30,8 +31,6 @@ def _(mo):
                          full_width=True, debounce=True, show_value=True)
     height = mo.ui.slider(label='Высота рисунка:', start=4, stop=12, step=1,  
                           value=5, full_width=True, debounce=True, show_value=True)   
-
-
     return bins, distrs, height, title, vol, width
 
 
@@ -87,11 +86,10 @@ def _(bins, distrs, get_data, height, mo, title, vol, width):
                        mo.md('### Характеристики распределения:'), stats])
         middle = mo.hstack([lh, _fig])
         result = mo.vstack([title, middle])
-    
+
         return result
 
     ui()
-
     return
 
 

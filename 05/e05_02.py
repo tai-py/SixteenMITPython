@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -25,6 +25,7 @@ def _(np):
     def pendulum2(t, y, g, L):
         α, β = y
         return [β, - g/L*α] # линеарисованная система
+
     return pendulum1, pendulum2
 
 
@@ -40,7 +41,9 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Решение систем уравнений""")
+    mo.md(r"""
+    ## Решение систем уравнений
+    """)
     return
 
 
@@ -58,7 +61,9 @@ def _(L, g, pendulum1, pendulum2, solve_ivp, t, t0, tmax, α0, β0):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Визуализация""")
+    mo.md(r"""
+    ## Визуализация
+    """)
     return
 
 
@@ -96,7 +101,9 @@ def _(plt, y1, y2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Зависимость колебаний от начального угла $\alpha_0$""")
+    mo.md(r"""
+    ## Зависимость колебаний от начального угла $\alpha_0$
+    """)
     return
 
 

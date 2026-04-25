@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -17,7 +17,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Рисуем двойной маятник""")
+    mo.md(r"""
+    ## Рисуем двойной маятник
+    """)
     return
 
 
@@ -53,13 +55,17 @@ def _(plt):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r""" """)
+    mo.md(r"""
+ 
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Реализуем двойной маятник""")
+    mo.md(r"""
+    ## Реализуем двойной маятник
+    """)
     return
 
 
@@ -78,6 +84,7 @@ def _(np):
         x2 = l1 * np.sin(a1) + l2 * np.sin(a2)
         y2 = -l1 * np.cos(a1) - l2 * np.cos(a2)
         return x1, y1, x2, y2
+
     return (coords,)
 
 
@@ -499,7 +506,9 @@ def _(np, visualize_double_pendulum):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Погрешности интегрирования""")
+    mo.md(r"""
+    ## Погрешности интегрирования
+    """)
     return
 
 
@@ -664,7 +673,9 @@ def _(integration_error):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Погрешность интегрирования от погрешности в начальных условиях""")
+    mo.md(r"""
+    ## Погрешность интегрирования от погрешности в начальных условиях
+    """)
     return
 
 

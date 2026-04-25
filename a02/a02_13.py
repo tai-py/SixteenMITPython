@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.2"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -14,12 +14,10 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(
-        f"""
+    mo.md(f"""
     ## Вставка виджетов в Markdown
     Вставляем текушую дату/время: {mo.ui.datetime()}
-    """
-    )
+    """)
     return
 
 
@@ -70,7 +68,9 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md("""## Верстаем приложение""")
+    mo.md("""
+    ## Верстаем приложение
+    """)
     return
 
 
@@ -130,6 +130,7 @@ def _():
         ax.view_init(azim=az, elev=el, roll=rl)
         plt.tight_layout()
         return fig
+
     return (plot,)
 
 
@@ -171,7 +172,9 @@ def _(axis, azim, elev, mo, plot, roll, title):
 
 @app.cell
 def _(mo):
-    mo.md("""## Гармошка (mo.accordion)""")
+    mo.md("""
+    ## Гармошка (mo.accordion)
+    """)
     return
 
 
@@ -210,7 +213,9 @@ def _(mo, time_consuming_function):
 
 @app.cell
 def _(mo):
-    mo.md("""## Боковая панель (sidebar)""")
+    mo.md("""
+    ## Боковая панель (sidebar)
+    """)
     return
 
 
@@ -238,13 +243,11 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md(
-        f"""
+    mo.md(f"""
     ## Иерархия
     {mo.tree(["Элемент", "Элемент со списком", {"key": [0, 1, 2]}], 
              label="Дерево")}
-    """
-    )
+    """)
     return
 
 

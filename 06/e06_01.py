@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -31,7 +31,9 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Характеристики веса и роста студентов""")
+    mo.md(r"""
+    ## Характеристики веса и роста студентов
+    """)
     return
 
 
@@ -50,7 +52,9 @@ def _(height, np, weight):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Зарплаты в фирме""")
+    mo.md(r"""
+    ## Зарплаты в фирме
+    """)
     return
 
 
@@ -64,7 +68,9 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Характеристики разброса""")
+    mo.md(r"""
+    ## Характеристики разброса
+    """)
     return
 
 
@@ -108,7 +114,9 @@ def _(height, mo, np, salaries, weight):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Корреляция между ростом и весом""")
+    mo.md(r"""
+    ## Корреляция между ростом и весом
+    """)
     return
 
 
@@ -120,7 +128,9 @@ def _(height, np, weight):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Визуализация с помощью matplotlib""")
+    mo.md(r"""
+    ## Визуализация с помощью matplotlib
+    """)
     return
 
 
@@ -168,7 +178,9 @@ def _(height_weight, plt, sns):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Строим линию регрессии. Множественность моделей""")
+    mo.md(r"""
+    ## Строим линию регрессии. Множественность моделей
+    """)
     return
 
 
@@ -225,7 +237,9 @@ def _(h, h2, height, plt, w, w1, w3, weight):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Описание функции polyfit""")
+    mo.md(r"""
+    ## Описание функции polyfit
+    """)
     return
 
 
@@ -237,7 +251,9 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Система линейных уравнений для метода наименьших квадратов""")
+    mo.md(r"""
+    ## Система линейных уравнений для метода наименьших квадратов
+    """)
     return
 
 

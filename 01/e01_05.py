@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.11"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -10,12 +10,15 @@ def _():
     import numpy as np
     import matplotlib.pyplot as plt
     import sympy as smp
+
     return mo, np, plt, smp
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""# Овал Толстого и лемниската Бернулли""")
+    mo.md(r"""
+    # Овал Толстого и лемниската Бернулли
+    """)
     return
 
 
@@ -88,7 +91,6 @@ def _(smp, tolstoi, tolstoi_curvature, x):
         p1.show()
 
     curve_plot()
-
     return (curve_plot,)
 
 
@@ -153,6 +155,7 @@ def _(np, tolstoi_numpy, y):
         xx = np.abs(x)    
         return  np.where(np.abs(xx)<l, h, tolstoi_numpy(xx-l, h=h))
         return y 
+
     return (stadium,)
 
 
@@ -209,7 +212,7 @@ def _(np):
         ...
         def __init__(self): 
             super().__init__(self)
-        
+
     Ivl()
     return
 
@@ -232,7 +235,6 @@ def _(np):
             print('   obj type is %s' % type(obj))
 
     C((10,), dtype=object)
-
     return
 
 

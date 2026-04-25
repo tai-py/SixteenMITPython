@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.0"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -42,7 +42,7 @@ def _(curve_fit, err, gaussian, np, plt):
             с = curve_fit(f, x, y, p0=p0)
         else:
             с = curve_fit(f, x, y)
-    
+
         # аппроксимация
         ya = f(x, *с[0])
         error = err(f, x, y, с[0])
@@ -60,7 +60,6 @@ def _(curve_fit, err, gaussian, np, plt):
         return с[0], error, fig
 
     test_approximation(gaussian, p=(1, 5, 2), fn='06_11a.png')
-
     return (test_approximation,)
 
 

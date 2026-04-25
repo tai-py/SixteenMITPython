@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.0"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -54,7 +54,9 @@ def _(np, plt):
 
 @app.cell
 def _(mo):
-    mo.md("""## Афинные преобразования""")
+    mo.md("""
+    ## Афинные преобразования
+    """)
     return
 
 
@@ -129,7 +131,9 @@ def _(affine_transformation, draw_contour, np, x, y):
 
 @app.cell
 def _(mo):
-    mo.md("""### Композиция отображений""")
+    mo.md("""
+    ### Композиция отображений
+    """)
     return
 
 
@@ -189,7 +193,9 @@ def _(mo, np):
 
 @app.cell
 def _(mo):
-    mo.md("""### Результат композиции преобразований зависит от их порядка""")
+    mo.md("""
+    ### Результат композиции преобразований зависит от их порядка
+    """)
     return
 
 

@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.0"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -64,7 +64,6 @@ def _(plt, sns, text1, text2):
     plt.legend()
     plt.savefig('06_20.png', dpi=300, facecolor='white')
     _fig
-
     return symbs_nouns_dict, symbs_tolstoi
 
 

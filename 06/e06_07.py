@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -18,7 +18,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Одномерная  интерполяция""")
+    mo.md(r"""
+    ## Одномерная  интерполяция
+    """)
     return
 
 
@@ -165,7 +167,9 @@ def _(UVS, np, plt, x, y):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Двумерная интрполяция""")
+    mo.md(r"""
+    ## Двумерная интрполяция
+    """)
     return
 
 
@@ -211,12 +215,10 @@ def _(np):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Двумерная интерполяция
     ### Конструируем интерполятор
-    """
-    )
+    """)
     return
 
 
@@ -228,7 +230,9 @@ def _(RBS, pr, ps, ts):
 
 @app.cell
 def _(mo):
-    mo.md(r"""Производим интепорполяцию на точках таблицы""")
+    mo.md(r"""
+    Производим интепорполяцию на точках таблицы
+    """)
     return
 
 
@@ -246,7 +250,9 @@ def _(spl2d):
 
 @app.cell
 def _(mo):
-    mo.md(r"""### Вычисляем плотности раствора  спирта на сетке 100 на 100""")
+    mo.md(r"""
+    ### Вычисляем плотности раствора  спирта на сетке 100 на 100
+    """)
     return
 
 
@@ -336,7 +342,9 @@ def _(Pr, azim, elev, pps, roll, tts, visualize3d):
 
 @app.cell
 def _(mo):
-    mo.md(r"""### Зависимости плотности от температуры""")
+    mo.md(r"""
+    ### Зависимости плотности от температуры
+    """)
     return
 
 

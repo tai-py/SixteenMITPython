@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.0"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -78,7 +78,7 @@ def _(mo, seq_diag):
 def _(mo):
     mo.mermaid("""
     mindmap
-    root )8 этюдов... (
+    root )16 этюдов... (
     """)
     return
 
@@ -107,7 +107,7 @@ def _(mo):
 def _(mo):
     mo.mermaid("""
     mindmap
-    root )**8 занятий...**(
+    root )**16 занятий...**(
         [**Главы**]  
             1. Математический анализ трамвайных путей
             2. Вычислительный Реннесанс: метод Ньютона

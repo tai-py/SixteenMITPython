@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.11"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -9,12 +9,15 @@ def _():
     import marimo as mo
     import numpy as np
     import matplotlib.pyplot as plt
+
     return mo, np, plt
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""# Эллипсы и овалы Кассини""")
+    mo.md(r"""
+    # Эллипсы и овалы Кассини
+    """)
     return
 
 
@@ -44,6 +47,7 @@ def _(mean, np):
         '''Эллипс как геометрическое место точек'''
         return mean(np.sqrt((x - c)**2 + y**2), 
                     np.sqrt((x + c)**2 + y**2)) - a
+
     return (ellipse,)
 
 
@@ -53,6 +57,7 @@ def _(gmean, np):
         '''Эллипс как геометрическое место точек'''
         return gmean(np.sqrt((x - c)**2 + y**2), 
                     np.sqrt((x + c)**2 + y**2)) - a
+
     return (cassini,)
 
 

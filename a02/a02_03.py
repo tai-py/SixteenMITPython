@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -16,14 +16,12 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Ячейка Markdown
     В ячейках такого типа могут быть формулы, закодированные с помомю Latex, например, функция ошибок:
 
     $$erf(x)=\frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} dt.$$
-    """
-    )
+    """)
     return
 
 

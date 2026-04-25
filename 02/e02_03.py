@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -57,7 +57,9 @@ def _(f, newton):
 
 @app.cell
 def _(mo):
-    mo.md(r"""Функция root""")
+    mo.md(r"""
+    Функция root
+    """)
     return
 
 
@@ -137,7 +139,9 @@ def _(f, np, plt, root):
 
 @app.cell
 def _(mo):
-    mo.md(r"""##Овалы Кассини, Толстого, лемниската Бернулли""")
+    mo.md(r"""
+    ##Овалы Кассини, Толстого, лемниската Бернулли
+    """)
     return
 
 
@@ -249,7 +253,9 @@ def _(lemniscata, newton, np, oval_tolstoi, plt):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Области притяжения корней""")
+    mo.md(r"""
+    ## Области притяжения корней
+    """)
     return
 
 
@@ -296,7 +302,6 @@ def _(lemniscata, np, oval_tolstoi, plt, root):
         return [oval_tolstoi(*u),  lemniscata(*u)]
 
     root_traction_areas(eq,  (-3, -1.5, 4, 2), n=50, fn="newton_11a.png")
-
     return eq, root_traction_areas
 
 

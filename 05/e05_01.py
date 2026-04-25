@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -17,7 +17,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Делаем попытку аналитического решения""")
+    mo.md(r"""
+    ## Делаем попытку аналитического решения
+    """)
     return
 
 
@@ -39,13 +41,17 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(r"""###После часового запуска решение пришлось прервать""")
+    mo.md(r"""
+    ###После часового запуска решение пришлось прервать
+    """)
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""### Линеаризуем второе уравнение""")
+    mo.md(r"""
+    ### Линеаризуем второе уравнение
+    """)
     return
 
 
@@ -81,7 +87,9 @@ def _(L, g, result, smp, t, α0):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Визуализация""")
+    mo.md(r"""
+    ## Визуализация
+    """)
     return
 
 

@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.14.16"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -40,7 +40,9 @@ def _(smp):
 
 @app.cell
 def _(mo):
-    mo.md(r"""Решение заняло более минуты""")
+    mo.md(r"""
+    Решение заняло более минуты
+    """)
     return
 
 
@@ -58,7 +60,6 @@ def _(L01, L03, L04, L12, alpha, smp, sol):
         return x01p, y01p, x02p, y02p
 
     x01p, y01p, x02p, y02p = get_x0(sol, alpha, L01, L03, L12, L04)
-
     return x01p, x02p, y01p, y02p
 
 
@@ -93,7 +94,7 @@ def _(coords, plt, x02p, y02p):
         xy = coords(n, x0, y0, r,  L01, L03, L12, L04)    
         ax.plot(xy[8, :], xy[9, :], 'k-')
         ax.plot(xy[8, n1:n2], xy[9, n1:n2], 'r-', lw=3)   
-    
+
     n = 1000
     # создаем рисунки на холсте
     fig, ax = plt.subplots(nrows=1, ncols=3, figsize=(12, 4))
@@ -127,7 +128,6 @@ def _(coords, np, x02p, y02p):
         return abs(medy - miny) 
 
     goal((40,40., 20., 40.))
-
     return (goal,)
 
 
@@ -163,9 +163,9 @@ def _(coords, goal, minimize, plt, x02p, y02p):
         fig, ax = plt.subplots(figsize=figsize)
         L01, L03, L12, L04 = initial_guess
         xy = coords(n, x0, y0, r,  L01, L03, L12, L04)
-    
+
         ax.plot(xy[8, :], xy[9, :], 'b-', label="начальное приближение")
-   
+
         result = minimize(goal, initial_guess, options=dict(xatol=xatol), 
                           method='nelder-mead')
         if result.success:
@@ -192,7 +192,7 @@ def _(coords, goal, minimize, plt, x02p, y02p):
                  x0=x02p, y0=y02p, fs=8):    
         L01, L03, L12, L04 = initial_guess
         xy = coords(n, x0, y0, r,  L01, L03, L12, L04)
-    
+
         ax.plot(xy[8, :], xy[9, :], 'b-', label="начальное приближение")
         result = minimize(goal, initial_guess, options=dict(xatol=xatol), 
                           method='nelder-mead')

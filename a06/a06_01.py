@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -26,6 +26,7 @@ def _():
 def _():
     import numpy as np
     import matplotlib.pyplot as plt
+
     return np, plt
 
 
@@ -68,7 +69,9 @@ def build_gif_animation(f, nframes, duration=50, fn="public/anim.gif"):
 
 @app.cell
 def _(mo):
-    mo.md("""## Создаем простую gif-анимацию""")
+    mo.md("""
+    ## Создаем простую gif-анимацию
+    """)
     return
 
 
@@ -99,7 +102,9 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md("""## Игра "Жизнь" Конвея""")
+    mo.md("""
+    ## Игра "Жизнь" Конвея
+    """)
     return
 
 

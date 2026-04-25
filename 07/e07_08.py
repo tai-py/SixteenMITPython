@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.0"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -61,6 +61,7 @@ def _(np):
         u = np.where(x2 >= y2, np.sign(xx) * x2 / r, np.sign(yy) * xx * yy / r)
         v = np.where(x2 >= y2, np.sign(xx) * xx * yy / r, np.sign(yy) * y2 / r)
         return u, v
+
     return (square_2_circle,)
 
 
@@ -97,7 +98,9 @@ def _(np, plt, square_2_circle):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Рассчитывем круглый предел""")
+    mo.md(r"""
+    ## Рассчитывем круглый предел
+    """)
     return
 
 
@@ -115,6 +118,7 @@ def _(f_square_limit, square_2_circle):
         u, v = square_2_circle(x, y)
         s.vertices[:, 0], s.vertices[:, 1] = u, v
         return s
+
     return (circle_limit,)
 
 

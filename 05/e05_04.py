@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.2"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -34,7 +34,7 @@ def predator_prey(t, z, α, β, λ1, λ2, γ, δ):
     γ - величина, учитывающая внутривидовую конкуренцию  в популяции жертв
     δ - величина, учитывающая внутривидовое сотрудничество  в популяции хищников
     Функция возвращает правую часть системы уравнений Лотки-Вольтерры 
-    
+
     '''
     x, y = z
     return [α*x - λ1*x*y - γ*x**2, λ2*x*y - β*y+ δ*y**2]
@@ -54,7 +54,6 @@ def _(np, solve_ivp):
     z = solve_ivp(predator_prey, [0, t_end], (x0, y0), 
                        method='RK45', t_eval=t_eval,
                        args=(α, β, λ1, λ2, γ, δ))
-
     return
 
 
@@ -98,7 +97,6 @@ def _(mo):
     lw_label = mo.md('Толщина линии')
     lw_slider = mo.ui.slider(label='', start=0.5, stop=5, 
                                step=.5, value=1, debounce=True, show_value=True)
-
     return (
         h_label,
         h_slider,
@@ -131,10 +129,10 @@ def _(mo, np, plt, solve_ivp):
     def calculate_visualize(t_end=250, x0=50, y0=5, α=0.5, β=0.2,
                             λ1=0.05, λ2=0.02, γ=0, δ=0,
                             figsize=(4, 6), lw=1):
-    
+
         n = 10_000 # число разбиений интервала времени
         t_eval = np.linspace(0, t_end, n) # массив времен
-    
+
         z = solve_ivp(predator_prey, [0, t_end], (x0, y0), 
                            method='RK45', t_eval=t_eval,
                            args=(α, β, λ1, λ2, γ, δ))
@@ -150,11 +148,12 @@ def _(mo, np, plt, solve_ivp):
             axs[1].plot(z.y[0,:], z.y[1,:],'b-', lw=lw)
             axs[1].set_xlabel('Численность жертв')
             axs[1].set_ylabel('Численность хищников')
-        
+
             plt.tight_layout()
             return fig
         else:
             return mo.md(f"**Интегрирование завершилось неудачей. Сообщение: {z.message}**")
+
     return (calculate_visualize,)
 
 
@@ -182,6 +181,7 @@ def _(
                         γ=γ_slider.value, δ=0,           
                         figsize=(w_slider.value, h_slider.value), 
                         lw=lw_slider.value)
+
     return (c_and_v,)
 
 

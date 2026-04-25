@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -21,7 +21,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Режим калькулятора""")
+    mo.md(r"""
+    ## Режим калькулятора
+    """)
     return
 
 
@@ -56,7 +58,9 @@ def _(unc):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Функции на числах с погрешностями""")
+    mo.md(r"""
+    ## Функции на числах с погрешностями
+    """)
     return
 
 
@@ -74,7 +78,9 @@ def _(um, unc):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Извлекаем номинальное значение и СКО""")
+    mo.md(r"""
+    ## Извлекаем номинальное значение и СКО
+    """)
     return
 
 
@@ -87,7 +93,9 @@ def _(unc):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Вычисляем $(1-cos(x))/x^2$ с помощью unc""")
+    mo.md(r"""
+    ## Вычисляем $(1-cos(x))/x^2$ с помощью unc
+    """)
     return
 
 
@@ -132,7 +140,9 @@ def _(plt, um, unc):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Логистическое отображение""")
+    mo.md(r"""
+    ## Логистическое отображение
+    """)
     return
 
 
@@ -243,7 +253,6 @@ def _(correlated_values, np):
         return result
 
     logistic3(corr=0), logistic3(corr=1), logistic3()   
-
 
     return (logistic3,)
 

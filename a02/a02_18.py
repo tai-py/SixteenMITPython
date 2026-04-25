@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -14,7 +14,9 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md("""## Кнопка запуска""")
+    mo.md("""
+    ## Кнопка запуска
+    """)
     return
 
 
@@ -39,7 +41,9 @@ def _(btn1, mo):
 
 @app.cell
 def _(mo):
-    mo.md("""## Форма с несколькими элементами""")
+    mo.md("""
+    ## Форма с несколькими элементами
+    """)
     return
 
 

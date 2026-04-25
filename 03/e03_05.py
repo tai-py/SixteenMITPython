@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.15"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -65,7 +65,9 @@ def _(iv1):
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Вычисляем значение интеграла методом прямоугольников для данных с порешностями""")
+    mo.md(r"""
+    ## Вычисляем значение интеграла методом прямоугольников для данных с порешностями
+    """)
     return
 
 
@@ -89,7 +91,6 @@ def _(Ivl, np):
     (integral(lambda x: x**3, n=10, epsx=1e-3, epsf=1e-3),
      integral(lambda x: x**3, n=1000, epsx=1e-3, epsf=1e-3),
     )
-
     return (integral,)
 
 
@@ -98,7 +99,6 @@ def _(integral):
     (integral(lambda x: x**3, n=10, epsx=1e-6, epsf=1e-6),
      integral(lambda x: x**3, n=1000, epsx=1e-6, epsf=1e-6),
     )
-
     return
 
 

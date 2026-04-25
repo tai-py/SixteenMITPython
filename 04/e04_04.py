@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.2"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -51,7 +51,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Перевод арабских чисел в римские""")
+    mo.md(r"""
+    ## Перевод арабских чисел в римские
+    """)
     return
 
 
@@ -84,7 +86,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Перевод римских чисел в арабские методом грубой силы""")
+    mo.md(r"""
+    ## Перевод римских чисел в арабские методом грубой силы
+    """)
     return
 
 

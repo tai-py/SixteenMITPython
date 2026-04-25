@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.23.1"
 app = marimo.App(width="medium")
 
 
@@ -16,20 +16,17 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ```sql
     select column1, column2 from df
     ```
-    """
-    )
+    """)
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ```python
     import plotly.express as px
 
@@ -39,15 +36,13 @@ def _(mo):
     figtr.update_traces(line={"width": 15})
     plotly_fig = mo.ui.plotly(figtr)
     ```
-    """
-    )
+    """)
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     В Markdown же можно кодировать исходный текст на раздичных языках программирования, заключенный  в тройных обратных апострофах.
     Например, SQL:
     ```sql
@@ -63,8 +58,7 @@ def _(mo):
     figtr.update_traces(line={"width": 15})
     plotly_fig = mo.ui.plotly(figtr)
     ```
-    """
-    )
+    """)
     return
 
 

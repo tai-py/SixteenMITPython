@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.15.0"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -22,7 +22,6 @@ def _(np):
         return x, y
 
     get_data(5)
-
     return (get_data,)
 
 
@@ -42,7 +41,6 @@ def _(get_data, np, plt):
     plt.xlabel('x')
     plt.ylabel('y')
     plt.savefig('06_09.png', dpi=300, facecolor="white")
-
     return (build_model,)
 
 
@@ -54,7 +52,6 @@ def _(build_model, get_data, np):
     _x, _y = get_data()
     _model = build_model(_x, _y, 3)
     std_error(_x, _y, _model)
-
     return (std_error,)
 
 
@@ -88,7 +85,7 @@ def _(build_model, get_data, np, plt, std_error):
         plt.legend()
         plt.title(f"СКО:{s}")
         plt.tight_layout()
-    
+
         return fig
 
     _fig = test_models(s=0.0)

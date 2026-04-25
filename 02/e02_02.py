@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.14.16"
+__generated_with = "0.23.2"
 app = marimo.App(width="medium")
 
 
@@ -53,13 +53,14 @@ def _(square):
         return x2, iter, f2, success, history
 
     secant(square, 0, 3)
-
     return (secant,)
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""## Визуализируем метод секущих""")
+    mo.md(r"""
+    ## Визуализируем метод секущих
+    """)
     return
 
 
@@ -102,7 +103,7 @@ def _(np, plt, secant, square):
             ax.plot([xz, xz], [0, fz], 'k:')
             if nums:
                 ax.text(xz - padx, pady, str(_ + iters[0]), color='red')
-            
+
         ax.set_xlabel('x')
         ax.set_ylabel('f(x)')
 
@@ -127,13 +128,14 @@ def _(secant):
     f = lambda x: x**3 - 5*x**2 - 4.5
     x2, iter, f2, success, history = secant(f, -2, 5.5, tol=1e-10)
     print(f"{x2=}, {iter=}, {f2=}, {success=}")
-
     return (f,)
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Зависимость числа итераций от насального приближения""")
+    mo.md(r"""
+    ## Зависимость числа итераций от насального приближения
+    """)
     return
 
 
@@ -165,7 +167,9 @@ def _(f, np, plt, secant):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Аналитическое решение для уравнения пробной функции""")
+    mo.md(r"""
+    ## Аналитическое решение для уравнения пробной функции
+    """)
     return
 
 
@@ -176,7 +180,6 @@ def _():
     x = smp.symbols('x')
     fa = x**3 - 5*x**2 - 4.5
     smp.solve(fa, x)
-
     return
 
 
